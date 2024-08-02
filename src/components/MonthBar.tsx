@@ -1,3 +1,4 @@
+
 const MonthBar: React.FC<MonthBarProps> = ({ month, height }) => {
     return (
       <div className="flex flex-col flex-1 items-center px-1.5 h-[200px] justify-end">

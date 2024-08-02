@@ -29,8 +29,15 @@ const Layout: React.FC = () => {
         <header className="flex justify-between items-center mb-8">
           <h1 className="text-3xl font-bold">{pageTitle}</h1>
           <button className="text-blue-600 hover:underline flex items-center">
-            <span className="mr-2">👤</span>
-            Logout
+            {/* <span className="mr-2">👤</span> */}
+            <span className="mr-2">
+          <img
+            loading="lazy"
+            src={"https://cdn.builder.io/api/v1/image/assets/TEMP/841af853ff81a66b65582252df23ded31231ccec76099a6774b4d5891f92e5aa?apiKey=144882928c014ec7a74d06e0b85e9ba9&&apiKey=144882928c014ec7a74d06e0b85e9ba9"}
+            alt={'Profile'}
+            className="object-contain w-full aspect-square max-w-[32px]"
+          />
+        </span>
           </button>
         </header>
         <Outlet />
