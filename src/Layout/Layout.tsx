@@ -1,11 +1,16 @@
 // src/Layout/Layout.tsx
 
 import React from 'react';
-import { Outlet, useLocation } from 'react-router-dom';
+import { Outlet, useLocation, useNavigate } from 'react-router-dom';
 import Sidebar from './Sidebar';
+
 
 const Layout: React.FC = () => {
   const location = useLocation();
+  const navigate = useNavigate();
+
+
+  
 
   // Mapping of paths to page names
   const pageNames: { [key: string]: string } = {
@@ -16,11 +21,19 @@ const Layout: React.FC = () => {
     '/notifications': 'Notifications',
     '/settings': 'Settings',
     '/logout': 'Logout',
+    '/login': 'Login',
+
   };
 
   // Get the current path and determine the page name
   const currentPath = location.pathname;
   const pageTitle = pageNames[currentPath] || 'Overview';
+
+
+
+  const handleLoginClick = () => {
+    navigate('/login');
+  };
 
   return (
     <div className="flex min-h-screen bg-white">
@@ -28,7 +41,7 @@ const Layout: React.FC = () => {
       <main className="flex-1 p-8">
         <header className="flex justify-between items-center mb-8">
           <h1 className="text-3xl font-bold">{pageTitle}</h1>
-          <button className="text-blue-600 hover:underline flex items-center">
+          <button className="text-blue-600 hover:underline flex items-center" onClick={handleLoginClick}>
             {/* <span className="mr-2">👤</span> */}
             <span className="mr-2">
           <img

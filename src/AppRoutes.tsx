@@ -8,11 +8,15 @@ import Locations from './components/Locations';
 import Notifications from './components/Notifications';
 import Settings from './components/Settings';
 import Logout from './components/Logout';
+import Authentication from './components/Login/Autrhenitication';
+
 
 function AppRoutes() {
   return (
     <Routes>
       <Route path="/login" element={<Login />} />
+      
+      <Route path="/auth" element={<Authentication />} />
       
       <Route element={<Layout />}>
       <Route path="/" element={<Overview />} />
@@ -22,6 +26,7 @@ function AppRoutes() {
         <Route path="/notifications" element={<Notifications />} />
         <Route path="/settings" element={<Settings />} />
         <Route path="/logout" element={<Logout />} />
+      
       </Route>
     </Routes>
   );

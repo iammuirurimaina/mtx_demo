@@ -56,12 +56,12 @@ const CombinedGasUsage: React.FC = () => {
   };
 
   return (
-    <main className="flex flex-col lg:flex-row h-screen bg-stone-100 p-4 sm:p-6">
+    <main className="flex flex-col lg:flex-row h-[100%] bg-stone-100 p-4 sm:p-6">
       <section className="flex-grow lg:mr-6 bg-white rounded-3xl p-4 sm:p-6 flex flex-col">
         <div className="flex-grow"></div>
         <div className="flex flex-col sm:flex-row justify-between mb-4">
           {features.map((feature, index) => (
-            <div key={index} className="bg-stone-100 rounded-3xl p-4 mb-4 sm:mb-0 sm:mr-4 last:mr-0 flex-1">
+            <button key={index} className="bg-stone-100 rounded-3xl p-4 mb-4 sm:mb-0 sm:mr-4 last:mr-0 flex-1 text-left">
               <div className="flex items-center mb-2">
                 <div className="bg-white rounded-full p-2 mr-3">
                   <img src={feature.icon} alt="" className="w-6 h-6" />
@@ -69,7 +69,7 @@ const CombinedGasUsage: React.FC = () => {
               </div>
               <h3 className="text-emerald-800 font-semibold mb-1">{feature.title}</h3>
               <p className="text-sm text-gray-600">{feature.description}</p>
-            </div>
+            </button>
           ))}
         </div>
         <form onSubmit={handleSubmit} className="flex items-center bg-stone-100 rounded-full p-2">
