@@ -6,7 +6,7 @@ import SearchSection from './Locations/SearchSection'
 export default class Locations extends Component {
   render() {
     return (
-      <div className='w-[500%]'>
+      <div className='w-[100%]'>
         <SearchSection />
         <LocationTable />
       </div>
