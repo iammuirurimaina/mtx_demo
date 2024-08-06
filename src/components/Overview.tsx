@@ -51,9 +51,9 @@ const Overview: React.FC = () => {
 };
 
 const StatCard: React.FC<{ title: string; value: string; subtext: string }> = ({ title, value, subtext }) => (
-  <div className=" bg-stone-200 p-4 rounded-lg shadow">
-    <h3 className="text-sm text-gray-500">{title}</h3>
-    <p className="text-2xl font-bold">{value}</p>
+  <div className="bg-stone-200 p-4 rounded-lg shadow w-full">
+    <h3 className="text-sm text-gray-500 mb-1">{title}</h3>
+    <p className="text-xl lg:text-2xl font-bold mb-1">{value}</p>
     <p className="text-xs text-gray-400">{subtext}</p>
   </div>
 );

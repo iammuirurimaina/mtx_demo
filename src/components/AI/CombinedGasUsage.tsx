@@ -56,12 +56,12 @@ const CombinedGasUsage: React.FC = () => {
   };
 
   return (
-    <main className="flex h-screen bg-stone-100 p-6">
-      <section className="flex-grow mr-6 bg-white rounded-3xl p-6 flex flex-col">
+    <main className="flex flex-col lg:flex-row h-screen bg-stone-100 p-4 sm:p-6">
+      <section className="flex-grow lg:mr-6 bg-white rounded-3xl p-4 sm:p-6 flex flex-col">
         <div className="flex-grow"></div>
-        <div className="flex justify-between mb-4">
+        <div className="flex flex-col sm:flex-row justify-between mb-4">
           {features.map((feature, index) => (
-            <div key={index} className="bg-stone-100 rounded-3xl p-4 flex-1 mr-4 last:mr-0">
+            <div key={index} className="bg-stone-100 rounded-3xl p-4 mb-4 sm:mb-0 sm:mr-4 last:mr-0 flex-1">
               <div className="flex items-center mb-2">
                 <div className="bg-white rounded-full p-2 mr-3">
                   <img src={feature.icon} alt="" className="w-6 h-6" />
@@ -86,7 +86,7 @@ const CombinedGasUsage: React.FC = () => {
           </button>
         </form>
       </section>
-      <aside className="w-1/4 flex flex-col">
+      <aside className="lg:w-1/4 flex flex-col mt-6 lg:mt-0">
         <h2 className="text-xl font-semibold mb-4 underline">Message History</h2>
         <div className="flex-grow overflow-y-auto">
           {messages.map((message, index) => (
